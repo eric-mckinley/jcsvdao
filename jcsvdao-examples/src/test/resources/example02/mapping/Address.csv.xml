@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CSVMapping className="org.jcsvdao.examples.example02.model.Address" csvFile="csv-examples/example02/alldata.txt" delimiter="," ignoreFirstLine="false">
+    <matchByColumn expectedColumn="0" expectedValue="ADDRESS"/>
+    <properties>
+        <property index="1" property="line1" primaryKey="true"/>
+        <property index="2" property="line2"/>
+        <property index="3" property="country"/>
+        <property index="4" property="postcode"/>
+        <property index="5" property="latitude"/>
+        <property index="5" property="longitude"/>
+    </properties>
+</CSVMapping>
+

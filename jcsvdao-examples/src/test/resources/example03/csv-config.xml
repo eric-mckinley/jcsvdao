@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CSVConfig>
+    <mappingFiles fileType="resource">
+        <mappingFile>/example03/mapping/Student.csv.xml</mappingFile>
+        <mappingFile>/example03/mapping/PostgradStudent.csv.xml</mappingFile>
+    </mappingFiles>
+</CSVConfig>

@@ -1,0 +1,7 @@
+Username, Email, Registration Date, Age, Premium User
+Jimmy, jim@test.com, 04-05-2016, 15, Yes, M
+Bob, bob@test.com, 15-01-2012, 32, No, M
+Alice, alice@test.com, 22-09-2011, 24, No, F
+Mike, mike@test.com, 11-03-2012, 18, Yes, M
+Helen, helen@test.com, 02-12-2013, 22, Yes, F
+Tom, tom@test.com, 08-11-2015, 45, No, M

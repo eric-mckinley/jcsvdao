@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CSVMapping className="org.jcsvdao.examples.example02.model.CompanyDetail" csvFile="csv-examples/example02/alldata.txt" delimiter="," ignoreFirstLine="false">
+
+
+    <matchByColumn expectedColumn="0" expectedValue="COMPANY"/>
+    <properties>
+        <property index="1" property="name" primaryKey="true"/>
+        <property index="2" property="industry"/>
+        <property index="3" property="employees"/>
+        <property index="4" property="website"/>
+        <property index="5" property="founder"/>
+        <property index="6" property="founded" converter="dateConverter"/>
+    </properties>
+    <converters>
+        <dateConverter converterName="dateConverter" format="MMM/yyyy"/>
+    </converters>
+</CSVMapping>
+

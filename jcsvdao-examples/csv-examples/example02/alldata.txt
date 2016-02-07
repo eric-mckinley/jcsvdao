@@ -1,0 +1,5 @@
+COMPANY, Apple, IT, 115000, www.apple.com, Steve Jobs, Apr/1976
+COMPANY, Microsoft, IT, 118584, www.microsoft.com, Bill Gates, Apr/1975
+COMPANY, Redhat, IT, 8300, www.redhat.com, Bob Young, Jan/1993
+ADDRESS, Building 4, Benny Street, UK, SW1 40E, 4.3240, -6.02232
+ADDRESS, Patrick Street, Limerick, Ireland, IE15, 0.23240, -3.02232

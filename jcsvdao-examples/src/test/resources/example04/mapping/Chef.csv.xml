@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CSVMapping className="org.jcsvdao.examples.example04.model.Chef" csvFile="csv-examples/example04/chefs.txt" delimiter="," ignoreFirstLine="true">
+    <matchAll/>
+    <properties>
+        <property index="0" property="id" primaryKey="true"/>
+        <property index="1" property="fullName"/>
+        <property index="2" property="title"/>
+    </properties>
+</CSVMapping>
+

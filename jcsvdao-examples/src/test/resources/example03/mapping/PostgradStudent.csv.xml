@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CSVMapping className="org.jcsvdao.examples.example03.model.PostgradStudent" csvFile="csv-examples/example03/students.txt" delimiter="," ignoreFirstLine="true">
+    <matchByColumnCount expectedColumns="4"/>
+    <properties>
+        <property index="0" property="studentId" primaryKey="true"/>
+        <property index="1" property="firstName"/>
+        <property index="2" property="lastName"/>
+        <property index="3" property="thesisTitle"/>
+    </properties>
+</CSVMapping>
+

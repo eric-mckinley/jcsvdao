@@ -1,0 +1,16 @@
+Number, Name, Injured
+1001, Alf, false
+1002, Breda, false
+1003, Carol, true
+1004, Donald, true
+1005, Eric, false
+1006, Fiona, false
+1007, Gary, false
+1008, Henry, false
+1009, Iris, false
+1010, Jenny, true
+1011, Karen, false
+1012, Lisa, false
+1013, Mike, false
+1014, Neil, false
+1015, Oscar, false

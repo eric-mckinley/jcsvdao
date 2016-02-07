@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CSVMapping className="org.jcsvdao.examples.example05.model.SportsTeam" csvFile="csv-examples/example05B/teams.txt" delimiter="," ignoreFirstLine="true">
+    <matchAll/>
+    <properties>
+        <property index="0" property="teamId" primaryKey="true"/>
+        <property index="1" property="teamName"/>
+        <property index="2" property="sport"/>
+        <oneToMany index="3" property="members" foreignKeysDelimiter="-" classType="org.jcsvdao.examples.example05.model.TeamMember" bidirectionalProperty="currentTeam"/>
+    </properties>
+</CSVMapping>
+

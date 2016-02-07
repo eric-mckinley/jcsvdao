@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CSVMapping className="org.jcsvdao.examples.example05.model.TeamMember" csvFile="csv-examples/example05B/members.txt" delimiter="," ignoreFirstLine="true">
+    <matchAll/>
+    <properties>
+        <property index="0" property="playerNumber" primaryKey="true"/>
+        <property index="1" property="name"/>
+        <property index="2" property="injured"/>
+    </properties>
+</CSVMapping>
