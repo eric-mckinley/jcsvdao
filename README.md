@@ -1,5 +1,6 @@
 # jcsvdao
-Hibernate Style Mappings for CSV
+Java CSV to Pojo
+Hibernate Style Mappings for CSV ORM
 
 Simple ReadOnly Dao for mapping csv text files to Java Objects.
 
