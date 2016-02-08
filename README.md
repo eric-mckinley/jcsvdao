@@ -22,11 +22,12 @@ Tom, tom@test.com, 08-11-2015, 45, No, M
 ```
 Create A CsvDao
 
+```java
         CSVDaoFactory factory = new CSVDaoFactory("/csv-config.xml");
         CSVDao dao = new CSVDao(factory);
-        
+```        
 csv-config.xml
-```
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <CSVConfig>
     <mappingFiles fileType="resource">
@@ -35,7 +36,7 @@ csv-config.xml
 </CSVConfig>
 ```
 UserDetail.csv.xml
-```
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <CSVMapping className="org.jcsvdao.examples.example01.model.UserDetail" csvFile="csv-examples/example01/users.txt" delimiter="," ignoreFirstLine="true">
     <matchAll/>
