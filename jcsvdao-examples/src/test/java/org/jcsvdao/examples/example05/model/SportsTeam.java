@@ -5,7 +5,6 @@ import java.util.List;
 /**
  * Created by ericmckinley on 07/02/2016.
  *
- * @RentBadger
  */
 public class SportsTeam {
 

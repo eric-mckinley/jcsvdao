@@ -3,7 +3,6 @@ package org.jcsvdao.examples.example05.model;
 /**
  * Created by ericmckinley on 07/02/2016.
  *
- * @RentBadger
  */
 public class TeamMember {
 

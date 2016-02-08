@@ -72,14 +72,12 @@ public class CSVClassHandler extends AbstractTextHandler {
     private CSVPropertyConverter getCustomConverter(String converterName) {
         List<AbstractCSVPropertyConverter> converters = mapping.getConverters();
         if (converters != null) {
-            for (int i = 0; i < converters.size(); i++) {
-                AbstractCSVPropertyConverter converter = converters.get(i);
+            for (AbstractCSVPropertyConverter converter : converters) {
                 if (converter.getName().equals(converterName)) {
                     return converter;
                 }
             }
         }
         throw new CSVDaoException("No converter registered name " + converterName + " registered for " + mapping.getClassName());
-
     }
 }
