@@ -61,17 +61,17 @@ Line matching options for the classes .csv.xml file
 
 To map every line in the csv text file to the mapping class
 ```xml
- <matchAll/>
+<matchAll/>
 ```
 
 To match only lines with exact number of csv entries to the mapping class
 ```xml
-    <matchByColumnCount expectedColumns="3"/>
+<matchByColumnCount expectedColumns="3"/>
 ```
 
 To match lines by using an identifier column to the mapping class
 ```xml
-    <matchByColumn expectedColumn="0" expectedValue="COMPANY"/>
+<matchByColumn expectedColumn="0" expectedValue="COMPANY"/>
 ```
 
 
