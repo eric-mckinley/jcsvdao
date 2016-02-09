@@ -21,11 +21,13 @@ public class CSVClassRelationshipHandler extends AbstractTextHandler {
 
     private CSVClassMapping mapping;
     private CSVDao dao;
+    private CSVDaoFactory factory;
 
-    public CSVClassRelationshipHandler(CSVClassMapping mapping, CSVDao dao) {
+    public CSVClassRelationshipHandler(CSVDaoFactory factory, CSVClassMapping mapping, CSVDao dao) {
         super(mapping.getDelimiter(), mapping.getLineComment(), mapping.getIgnoreFirstLine());
         this.dao = dao;
         this.mapping = mapping;
+        this.factory = factory;
     }
 
 
@@ -47,7 +49,7 @@ public class CSVClassRelationshipHandler extends AbstractTextHandler {
                 if (property instanceof ManyToOneCSVColumnProperty) {
                     ManyToOneCSVColumnProperty manyToOne = (ManyToOneCSVColumnProperty) property;
 
-                    CSVClassMapping foreignMapping = CSVDaoFactory.getMapping(manyToOne.getClassType());
+                    CSVClassMapping foreignMapping = factory.getMapping(manyToOne.getClassType());
 
                     Class foreignType = ReflectionHelper.createClass(manyToOne.getClassType());
                     SimpleCSVColumnProperty foreignPrimaryKeyProp = foreignMapping.getPrimaryKey();
@@ -72,7 +74,7 @@ public class CSVClassRelationshipHandler extends AbstractTextHandler {
 
                     OneToManyCSVColumnProperty oneToMany = (OneToManyCSVColumnProperty) property;
 
-                    CSVClassMapping foreignMapping = CSVDaoFactory.getMapping(oneToMany.getClassType());
+                    CSVClassMapping foreignMapping = factory.getMapping(oneToMany.getClassType());
                     Class foreignType = ReflectionHelper.createClass(oneToMany.getClassType());
                     String[] foreignKeyValues = values[oneToMany.getColumn()].split(oneToMany.getForeignKeysDelimiter());
                     trimAll(foreignKeyValues);
@@ -100,7 +102,7 @@ public class CSVClassRelationshipHandler extends AbstractTextHandler {
                 } else if (property instanceof OneToOneCSVColumnProperty) {
                     OneToOneCSVColumnProperty oneToOne = (OneToOneCSVColumnProperty) property;
 
-                    CSVClassMapping foreignMapping = CSVDaoFactory.getMapping(oneToOne.getClassType());
+                    CSVClassMapping foreignMapping = factory.getMapping(oneToOne.getClassType());
                     Class foreignType = ReflectionHelper.createClass(oneToOne.getClassType());
 
                     SimpleCSVColumnProperty foreignPrimaryKeyProp = foreignMapping.getPrimaryKey();
