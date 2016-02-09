@@ -23,8 +23,9 @@ Tom, tom@test.com, 08-11-2015, 45, No, M
 Create A CsvDao
 
 ```java
-        CSVDaoFactory factory = new CSVDaoFactory("/csv-config.xml");
-        CSVDao dao = new CSVDao(factory);
+CSVDaoFactory factory = new CSVDaoFactory("/csv-config.xml");
+CSVDao dao = new CSVDao(factory);
+List<UserDetail> users = dao.find(UserDetail.class);
 ```        
 csv-config.xml
 ```xml
