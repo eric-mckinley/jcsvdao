@@ -74,7 +74,7 @@ public class CSVDao {
 
         for (CSVClassMapping mapping : mappings) {
 
-            CSVClassRelationshipHandler handler = new CSVClassRelationshipHandler(mapping, this);
+            CSVClassRelationshipHandler handler = new CSVClassRelationshipHandler(factory, mapping, this);
 
             TextFileDataReader reader = new TextFileDataReader();
             reader.register(handler);
@@ -85,7 +85,7 @@ public class CSVDao {
     }
 
     public <T>T get(Class<T> type, Serializable primaryKey)  {
-        CSVClassMapping mapping = CSVDaoFactory.getMapping(type);
+        CSVClassMapping mapping = factory.getMapping(type);
         SimpleCSVColumnProperty primaryKeyMapping = mapping.getPrimaryKey();
 
         NormalCriteria criteria = new NormalCriteria(primaryKeyMapping.getProperty(), Check.EQ, primaryKey);

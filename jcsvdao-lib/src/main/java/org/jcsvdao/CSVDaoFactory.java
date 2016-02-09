@@ -51,7 +51,7 @@ public class CSVDaoFactory {
     }
 
 
-    public static CSVClassMapping getMapping(String className) {
+    public CSVClassMapping getMapping(String className) {
         List<CSVClassMapping> mappings = config.getClassMappings();
         for (int i = 0; i < mappings.size(); i++) {
             CSVClassMapping mapping = mappings.get(i);
@@ -62,11 +62,9 @@ public class CSVDaoFactory {
         throw new CSVDaoException("Unable to find mapping for " + className);
     }
 
-    public static CSVClassMapping getMapping(Class clazz) {
+    public CSVClassMapping getMapping(Class clazz) {
         return getMapping(clazz.getName());
     }
-
-
 
 
 }
