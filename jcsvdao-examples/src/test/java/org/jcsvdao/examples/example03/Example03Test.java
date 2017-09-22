@@ -28,14 +28,14 @@ public class Example03Test {
 
     @Test
     public void find_allStudents_noErrors() {
-        List<Student> companies = dao.find(Student.class);
-        assertEquals(companies.size(), 7L);
+        List<Student> students = dao.find(Student.class);
+        assertEquals(students.size(), 7L);
     }
 
     @Test
     public void find_allPostgradStudents_noErrors() {
-        List<PostgradStudent> addresses = dao.find(PostgradStudent.class);
-        assertEquals(addresses.size(), 2L);
+        List<PostgradStudent> postgrads = dao.find(PostgradStudent.class);
+        assertEquals(postgrads.size(), 2L);
     }
 
     @Test
